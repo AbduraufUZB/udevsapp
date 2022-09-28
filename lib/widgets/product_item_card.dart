@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:udevsapp/core/constants/color_const.dart';
 import 'package:udevsapp/model/featured_model.dart';
 
 class ProductItemCard extends StatelessWidget {
@@ -102,7 +103,7 @@ class ProductItemCard extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 15.sp,
                           fontWeight: FontWeight.w600,
-                          color: Colors.blue,
+                          color: ColorConst.kPriceTextColor,
                         ),
                       ),
                     ],

@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_icon/svg_icon.dart';
+import 'package:udevsapp/core/constants/color_const.dart';
 import 'package:udevsapp/cubit/homeCubit/home_cubit.dart';
 import 'package:udevsapp/cubit/homeCubit/home_state.dart';
-import 'package:udevsapp/model/banners_model.dart';
-import 'package:udevsapp/model/category_model.dart';
-import 'package:udevsapp/service/api_service.dart';
 import 'package:udevsapp/widgets/category_item_card.dart';
 import 'package:udevsapp/widgets/custom_bottom_navbar.dart';
 import 'package:udevsapp/widgets/product_item_card.dart';
@@ -103,11 +101,11 @@ class HomePage extends StatelessWidget {
                                   ),
                                 );
                               },
-                              pagination: const SwiperPagination(
-                                margin: EdgeInsets.all(5.0),
+                              pagination: SwiperPagination(
+                                margin: const EdgeInsets.all(5.0),
                                 builder: DotSwiperPaginationBuilder(
-                                  color: Color(0xffDCDCDC),
-                                  activeColor: Colors.black,
+                                  color: ColorConst.kDotIndicatorDisabledColor,
+                                  activeColor: ColorConst.kBlackColor,
                                 ),
                               ),
                               itemCount: state.bannersModel.banners!.length,
