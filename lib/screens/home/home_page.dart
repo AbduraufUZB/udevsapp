@@ -135,7 +135,7 @@ class HomePage extends StatelessWidget {
                             gridDelegate:
                                 SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
-                              mainAxisExtent: 200.h,
+                              mainAxisExtent: 216.h,
                             ),
                             itemBuilder: (context, int index) {
                               return CategoryItemCard(

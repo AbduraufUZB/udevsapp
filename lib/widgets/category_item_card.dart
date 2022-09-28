@@ -17,29 +17,38 @@ class CategoryItemCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                width: 102.h,
-                height: 96.w,
+                width: 165.h,
+                height: 166.w,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(8.r),
-                  image: DecorationImage(
-                    image: CachedNetworkImageProvider(image),
-                    fit: BoxFit.cover
+                ),
+                child: SizedBox(
+                  height: 96.h,
+                  width: 102.w,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                      CachedNetworkImage(
+                        width: 100.w,
+                        height: 100.h,
+                        imageUrl: image,
+                      ),
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                      Text(
+                        textAlign: TextAlign.center,
+                        name,
+                        style: const TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.w600),
+                      ),
+                    ],
                   ),
                 ),
               ),
-              Padding(
-                  padding: EdgeInsets.only(top: 16.h),
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Text(
-                      textAlign: TextAlign.center,
-                      name,
-                      style:
-                          const TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                ),
             ],
           ),
         ),
